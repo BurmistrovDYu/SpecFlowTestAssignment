@@ -5,7 +5,7 @@ namespace SpecFlowTests.PageObjects
 {
     public class GoogleMainPage : BasePage
     {
-        GoogleMainPage(IWebDriver driver) : base(driver)
+        public GoogleMainPage(IWebDriver driver) : base(driver)
         {
             
         }
