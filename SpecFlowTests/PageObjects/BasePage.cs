@@ -31,6 +31,12 @@ namespace SpecFlowTests.PageObjects
             var actual = webDriver.Url;
             Assert.AreEqual(expected, actual, "Verify url is correct");
         }
+        
+        public void VerifyUrlContainsText(string text, bool expected = true)
+        {
+            var actual = webDriver.Url.Contains(text);
+            Assert.AreEqual(expected, actual, $"Verify url contains '{text}'");
+        }
 
         #endregion
     }
