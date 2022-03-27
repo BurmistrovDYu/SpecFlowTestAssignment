@@ -11,7 +11,7 @@ namespace SpecFlowTests.PageObjects
         }
 
         private IWebElement inputSearchField => webDriver.FindElement(By.XPath("//input[@role='combobox']"));
-        private IWebElement buttonGoogleSearch => webDriver.FindElement(By.XPath("//input[@name='btnK' and not(ancestor::div[contains(@style, 'display:none')])]"));
+        private IWebElement buttonGoogleSearch => webDriver.FindElement(By.XPath("//div[contains(@jsaction, 'mouseout')]//input[@name='btnK' and not(ancestor::div[contains(@style, 'display:none')])]"));
 
         #region Actions
 
