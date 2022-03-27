@@ -9,7 +9,7 @@ namespace SpecFlowTests.PageObjects
 {
     public class GoogleSearchResultsPage : BasePage
     {
-        GoogleSearchResultsPage(IWebDriver driver) : base(driver)
+        public GoogleSearchResultsPage(IWebDriver driver) : base(driver)
         {
             
         }
