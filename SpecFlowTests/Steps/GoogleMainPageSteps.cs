@@ -25,5 +25,23 @@ namespace SpecFlowTests.Steps
         {
             _googleMainPage.VerifyInputSearchFieldIsVisible();
         }
+
+        [When("search field is set to '(.*)'")]
+        public void WhenSearchFieldIsSetToValue(string text)
+        {
+            _googleMainPage.SetInputSearchFieldValue(text);
+        }
+
+        [When("Google Search button is clicked")]
+        public void WhenGoogleSearchButtonIsClicked()
+        {
+            _googleMainPage.ClickButtonGoogleSearch();
+        }
+
+        [Then("search field contains '(.*)'")]
+        public void ThenSearchFieldContainsValue(string text)
+        {
+            _googleMainPage.VerifyInputSearchFieldTextIsCorrect(text);
+        }
     }
 }
