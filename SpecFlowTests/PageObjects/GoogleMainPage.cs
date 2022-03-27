@@ -1,6 +1,8 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 
+using static SpecFlowTests.Constants.XPaths.GoogleMainPage;
+
 namespace SpecFlowTests.PageObjects
 {
     public class GoogleMainPage : BasePage
@@ -10,8 +12,8 @@ namespace SpecFlowTests.PageObjects
             
         }
 
-        private IWebElement InputSearchField => webDriver.FindElement(By.XPath("//input[@role='combobox']"));
-        private IWebElement ButtonGoogleSearch => webDriver.FindElement(By.XPath("//div[contains(@jsaction, 'mouseout')]//input[@name='btnK' and not(ancestor::div[contains(@style, 'display:none')])]"));
+        private IWebElement InputSearchField => webDriver.FindElement(By.XPath(InputSearchFieldXPath));
+        private IWebElement ButtonGoogleSearch => webDriver.FindElement(By.XPath(ButtonGoogleSearchXPath));
 
         #region Actions
 
